@@ -2,18 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {   
     [SerializeField] float runSpeed = 7f;
     [SerializeField] float jumpAmount = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Color32 dieColor = new Color32 (1, 1, 1, 1);
+    [SerializeField] Vector2 deathKick = new Vector2 (0f, 5f);
+    [SerializeField] GameObject arrow;
+    [SerializeField] Transform bow;
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     float startGravity;
+    bool isAlive = true;
+    SpriteRenderer mySpriteRenderer;
+    private CinemachineImpulseSource myImpulseSource;
+    
+    
     
     
     void Start()
@@ -23,23 +33,29 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         startGravity = myRigidBody.gravityScale;
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myImpulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
 
     void Update()
     {
+        if(!isAlive) {return;}
         Run();
         FlipSprite();
         ClimbLadder();
+        Die();
     }
 
     void OnMove(InputValue value)
     {
+        if(!isAlive) {return;}
         moveInput = value.Get<Vector2>();
     }
 
     void OnJump(InputValue value)
     {
+        if(!isAlive) {return;}
         if(!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             return;
@@ -87,6 +103,28 @@ public class PlayerMovement : MonoBehaviour
         bool playerHasVerticalSpeed = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);                  
     }
+
+    void Die()
+    {
+        if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazard")))
+        {
+            isAlive = false;
+            myAnimator.SetTrigger("isDied");
+            myRigidBody.velocity = deathKick;
+            mySpriteRenderer.color = dieColor;
+            myImpulseSource.GenerateImpulse(1);
+        }
+        
+    }
+
+    void OnFire(InputValue value)
+    {
+        if(!isAlive) {return;}
+        Instantiate(arrow, bow.position, transform.rotation);
+    }
+    
+
+
 
 
 

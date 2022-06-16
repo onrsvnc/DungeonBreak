@@ -7,6 +7,7 @@ public class GobberMovement : MonoBehaviour
     [SerializeField] float moveVelocity = 1f;
     Rigidbody2D myRigidBody;
     BoxCollider2D myBoxCollider;
+    CapsuleCollider2D myCapsuleCollider;
 
 
 
@@ -30,5 +31,6 @@ public class GobberMovement : MonoBehaviour
     {
         transform.localScale = new Vector2 (Mathf.Sign(moveVelocity), 1f);
     }
+    
 }
 
