@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7925852361858292076}
   - component: {fileID: 7925852361858292075}
   - component: {fileID: 7925852361858292074}
-  - component: {fileID: 2120924970377245894}
+  - component: {fileID: 1587006382203047771}
   m_Layer: 12
   m_Name: Arrow
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -692995395
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a9cb9146745a1242817a3689f55b338, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,7 +124,7 @@ CapsuleCollider2D:
   m_Offset: {x: 5.11, y: 0.2}
   m_Size: {x: 7.06, y: 5.2}
   m_Direction: 1
---- !u!114 &2120924970377245894
+--- !u!114 &1587006382203047771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7925852361858292073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a706255d696f244bb9781367a99e78, type: 3}
+  m_Script: {fileID: 11500000, guid: dc01c5c7d92b0da42ace8fd485efc26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowVelocityMultiplier: 7
+  arrowVelocityMultiplier: 10

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7144452058376614054}
   - component: {fileID: 7144452058376614055}
   - component: {fileID: 7144452058376614040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gobber (Enemy)
   m_TagString: Enemy
   m_Icon: {fileID: 0}

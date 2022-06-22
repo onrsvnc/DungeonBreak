@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     float startGravity;
-    bool isAlive = true;
+    public bool isAlive = true;
     SpriteRenderer mySpriteRenderer;
     private CinemachineImpulseSource myImpulseSource;
     
@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         startGravity = myRigidBody.gravityScale;
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myImpulseSource = GetComponent<CinemachineImpulseSource>();
+        
     }
 
 
@@ -113,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             myRigidBody.velocity = deathKick;
             mySpriteRenderer.color = dieColor;
             myImpulseSource.GenerateImpulse(1);
+            FindObjectOfType<GameSession>().ProcessPlayerDeath(); 
         }
         
     }
@@ -122,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
         if(!isAlive) {return;}
         Instantiate(arrow, bow.position, transform.rotation);
     }
+
+
     
 
 
