@@ -36,7 +36,7 @@ public class GameSession : MonoBehaviour
     {
         if (playerLives > 1)
         {
-            TakeLife();
+            Invoke("TakeLife", 2f);  //added delay to see death animaton with Invoke!
         }
 
         else
@@ -56,9 +56,9 @@ public class GameSession : MonoBehaviour
 
     void ResetGameSession()
     {
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
-        SceneManager.LoadScene(0);
-        Destroy(gameObject);
+        
+        StartCoroutine(DelayRestartScene());
+        
     }
 
     public void AddToScore(int pointsToAdd)
@@ -67,9 +67,12 @@ public class GameSession : MonoBehaviour
         scoreText.text = playerScore.ToString();
     }
 
-
-
-
-
+    IEnumerator DelayRestartScene()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
 
 }

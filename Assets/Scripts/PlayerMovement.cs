@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     private CinemachineImpulseSource myImpulseSource;
     
     
-    
-    
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -122,17 +120,11 @@ public class PlayerMovement : MonoBehaviour
     void OnFire(InputValue value)
     {
         if(!isAlive) {return;}
-        Instantiate(arrow, bow.position, transform.rotation);
+        if(value.isPressed)
+        {
+            myAnimator.SetTrigger("isShooted");
+            Instantiate(arrow, bow.position, transform.rotation);
+        }
     }
-
-
-    
-
-
-
-
-
-
-
 
 }

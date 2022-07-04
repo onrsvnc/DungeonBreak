@@ -130,7 +130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -692995395
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: -111222669, guid: 7a09c34cd0de01a4d9383a90b3348bee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -231,6 +231,7 @@ MonoBehaviour:
   deathKick: {x: 0, y: 14}
   arrow: {fileID: 7925852361858292073, guid: a5e444c9781196343ba766042f00455f, type: 3}
   bow: {fileID: 8799005732683722680}
+  isAlive: 1
 --- !u!61 &2942176695907838854
 BoxCollider2D:
   m_ObjectHideFlags: 0
