@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -296225933
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -977365608, guid: 4e8f1787c9565c64c9a2ca70c8cbedbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveVelocity: 1
+  gobberDiedSFX: {fileID: 8300000, guid: 1ec7c736c1fa30d4d874347257261de9, type: 3}
 --- !u!61 &7144452058376614040
 BoxCollider2D:
   m_ObjectHideFlags: 0

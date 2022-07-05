@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowVelocityMultiplier: 10
+  gobberDiedSFX: {fileID: 8300000, guid: 1ec7c736c1fa30d4d874347257261de9, type: 3}

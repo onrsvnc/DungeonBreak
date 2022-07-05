@@ -232,6 +232,7 @@ MonoBehaviour:
   arrow: {fileID: 7925852361858292073, guid: a5e444c9781196343ba766042f00455f, type: 3}
   bow: {fileID: 8799005732683722680}
   isAlive: 1
+  arrowSwish: {fileID: 8300000, guid: 79b72326eb40e9d44bef39b1056bdc1d, type: 3}
 --- !u!61 &2942176695907838854
 BoxCollider2D:
   m_ObjectHideFlags: 0

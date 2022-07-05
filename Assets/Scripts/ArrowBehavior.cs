@@ -9,6 +9,7 @@ public class ArrowBehavior : MonoBehaviour
     [SerializeField] float arrowVelocityMultiplier;
     PlayerMovement player;
     float arrowVelocity;
+    public AudioClip gobberDiedSFX;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class ArrowBehavior : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            AudioSource.PlayClipAtPoint(gobberDiedSFX, Camera.main.transform.position);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);

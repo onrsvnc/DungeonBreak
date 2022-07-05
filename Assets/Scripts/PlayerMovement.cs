@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isAlive = true;
     SpriteRenderer mySpriteRenderer;
     private CinemachineImpulseSource myImpulseSource;
+    public AudioClip arrowSwish;
     
     
     void Start()
@@ -124,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
         {
             myAnimator.SetTrigger("isShooted");
             Instantiate(arrow, bow.position, transform.rotation);
+            AudioSource.PlayClipAtPoint(arrowSwish, Camera.main.transform.position);
         }
     }
 
