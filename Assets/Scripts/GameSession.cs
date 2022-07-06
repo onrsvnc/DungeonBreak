@@ -54,7 +54,7 @@ public class GameSession : MonoBehaviour
         livesText.text = playerLives.ToString();
     }
 
-    void ResetGameSession()
+    public void ResetGameSession()
     {
         
         StartCoroutine(DelayRestartScene());
@@ -70,6 +70,13 @@ public class GameSession : MonoBehaviour
     IEnumerator DelayRestartScene()
     {
         yield return new WaitForSeconds(2f);
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
+
+    public void ResetGame()
+    {
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);

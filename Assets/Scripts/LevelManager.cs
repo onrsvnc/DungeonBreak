@@ -5,8 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+
     public void StartGame()
     {
         SceneManager.LoadScene("Level 1");
     }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void LoadMainMenu()
+    {
+        FindObjectOfType<GameSession>().ResetGame();   
+    }
+
+
 }

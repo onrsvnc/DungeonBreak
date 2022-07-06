@@ -23441,38 +23441,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1080810682, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.07075471
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080810682, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.8180866
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080810682, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080810682, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4279423487
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102223793, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102223793, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102223793, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1102223793, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190335
-      objectReference: {fileID: 0}
     - target: {fileID: 5997419654863789729, guid: d373185331f3c0746a4aa0dbd4b5f49d, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -25179,11 +25147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2007162172188986639, guid: ee6aa1f329549a64a9fe65ef45f60f49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5506353
+      value: -0.13348961
       objectReference: {fileID: 0}
     - target: {fileID: 2007162172188986639, guid: ee6aa1f329549a64a9fe65ef45f60f49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3530402
+      value: -2.3757153
       objectReference: {fileID: 0}
     - target: {fileID: 2007162172188986640, guid: ee6aa1f329549a64a9fe65ef45f60f49, type: 3}
       propertyPath: orthographic size
